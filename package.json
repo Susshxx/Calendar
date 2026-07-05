@@ -1,0 +1,34 @@
+{
+  "name": "calander-app",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder",
+    "package": "electron-packager . SushsCalendar --platform=win32 --arch=x64 --out=dist --overwrite --icon=assets/favicon.ico --win32metadata.FileDescription=\"Sush's Calendar\" --win32metadata.ProductName=\"SushsCalendar\""
+  },
+  "build": {
+    "appId": "com.sush.calanderapp",
+    "productName": "Sush's Calendar",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": "portable",
+      "icon": "assets/favicon.ico"
+    },
+    "files": [
+      "**/*",
+      "!dist/**/*",
+      "!node_modules/**/*"
+    ],
+    "extraFiles": [
+      "assets/**/*"
+    ]
+  },
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.13.3",
+    "electron-packager": "^17.1.2"
+  }
+}

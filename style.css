@@ -1,0 +1,149 @@
+@font-face {
+  font-family: "Pixelboy";
+  src: url("assets/Pixeboy.ttf") format("truetype");
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("assets/OuterBgimg.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    user-select: none;
+    -webkit-app-region: drag;
+    overflow: hidden;
+    cursor: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#custom-cursor {
+    position: fixed;
+    width: 12px;
+    height: 12px;
+    background: #ff4444;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 99999;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    left: 0;
+    top: 0;
+}
+
+.app{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 13.375rem;
+    padding: 1rem 1.0625rem;
+}
+
+button, input, select, textarea{
+    -webkit-app-region: no-drag;
+}
+
+.title{
+
+    display: flex;
+    width: 160px;
+    height: 32px;
+    justify-content: center;
+    align-items: center;
+    padding: 0.25rem 0.635rem;
+
+    border-radius: 15px;
+    border: 2px solid #C46161;
+    background: #D98BA5;
+
+    color:var(--black, #000);
+    font-family:"Pixelify Sans";
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+#calendertime { 
+    display: flex;
+    width: 280px;
+    height: 160px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    overflow: hidden;
+    background-image: url("assets/InnerBgimg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#day {
+    color: rgba(0, 0, 0, 0.80);
+    font-family: "Pixelify Sans";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 5px 0 -25px;
+    align-self: flex-start;
+    padding-left: 20px;
+}
+
+#time{
+    font-family: "Pixelboy";
+    color: rgba(16, 16, 16, 0.80);
+    font-size: 115px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: -25px;
+}
+
+#date {
+    text-align: center;
+    letter-spacing: 0.1rem;
+
+    color: rgba(0, 0, 0, 0.80);
+    font-family: "Pixeboy";
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+#close {
+    position: fixed;
+    top: 10px;   
+    right: 10px; 
+    width: 24px;
+    height: 24px;
+    background: #c6614a; 
+    color: white;
+    border-radius: 50%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: bold;
+    -webkit-app-region: no-drag;
+    z-index: 100;
+    cursor: pointer;
+}
+
+#close:hover {
+    background: #d25f4f;
+    transform: scale(1.1);
+}
